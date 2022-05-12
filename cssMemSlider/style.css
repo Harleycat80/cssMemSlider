@@ -10,7 +10,7 @@
    justify-content: center;
    align-items: center;
    overflow: hidden;
-   background-color: #ECE2DA;
+  
  }
  
  .main {
@@ -39,11 +39,10 @@
  }
  
  .slide1 {
-   width: 25%;
-   height: 95%;
+   width: 26%;
+   height: 100%;
    margin: 1rem 1%;
    transition: transform 0.5s ease-in-out;
-   border-radius: 20px;
    
    
  }
@@ -108,10 +107,13 @@
    line-height: 2rem;
    width: 25%;
    overflow: hidden;
+   transition: transform 0.5s ease-in-out;
+   
    
  }
  
  .navigator {
+   position: relative;
    grid-row-start: 3;
    grid-row-end: 4;
    grid-column-start: 3;
@@ -140,12 +142,13 @@
  .navigator label::before {
   content: "";
   position:absolute;
-  top:0;
+  top:-0.5rem;
   left: -1rem;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  
+  background-color: burlywood;
+  opacity: 0;
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 0.5rem;
@@ -206,93 +209,21 @@
  
  
  
- #slider1:checked ~ .navigator label:nth-child(1),
- #slider2:checked ~ .navigator label:nth-child(2),
- #slider3:checked ~ .navigator label:nth-child(3),
- #slider4:checked ~ .navigator label:nth-child(4) {
-   width: 1.2rem;
-   height: 1.2rem;
-background-color:rgb(161, 20, 103);
+ #slider1:checked ~ .navigator label:nth-child(1)::before,
+ #slider2:checked ~ .navigator label:nth-child(2)::before,
+ #slider3:checked ~ .navigator label:nth-child(3)::before,
+ #slider4:checked ~ .navigator label:nth-child(4)::before {
+ left:-0.25rem;
+ top:0.2rem;
+   width: 1rem;
+   height: 1rem;
+background-color:rgb(209, 190, 201);
+opacity: 1;
  }
  
  
    
  
- @media  (max-width:768px) and (max-height:1024px){
-  .main{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-   }
-   input[type='radio']{
-     margin-top: -2rem;
-   }
-
-   .container{
-     position: relative;
-  
-     margin-top: -3rem;
-   }
-  
-  .navigator{
-    position: relative;
-    margin-top: 1rem;
-    align-self: center;
-  }
-  .text{
-    margin-top: 2rem;
-    height: 6rem;
-    font-size: 2rem;
-   
-   
-  }
-  p{
-    vertical-align: middle;
-    line-height: 2.2rem;
-    
-  }
-}
-
-
- @media (max-width:1024px){
-  .main{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap:1rem;
-    overflow: hidden;
-   }
-   input[type='radio']{
-     margin-top: -5rem;
-   }
-   .container{
-     position: relative;
-     margin-top: -5rem;
-   }
-  
-  .navigator{
-    position: relative;
-    margin-top: -12rem;
-    align-self: center;
-  }
-  .text{
-    margin-top: 1rem;
-    height: 6rem;
-    font-size: 2rem;
-   
-   
-  }
-  p{
-    vertical-align: middle;
-    line-height: 2.2rem;
-    
-  }
-}
 @media (max-width:1024px) and (max-height:768px){
   .main{
     position: relative;
@@ -329,9 +260,48 @@ background-color:rgb(161, 20, 103);
     
   }
 }
+@media (max-width:1024px){
+  .main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    overflow: hidden;
+   }
+   input[type='radio']{
+     margin-top: -5rem;
+   }
+   .container{
+     position: relative;
+     margin-top: 8rem;
+   }
+  
+  .navigator{
+    position: relative;
+    margin-top: -5rem;
+    align-self: center;
+  }
+  .text{
+    margin-top: 1rem;
+    height: 6rem;
+    font-size: 2rem;
+   
+   
+  }
+  p{
+    vertical-align: middle;
+    line-height: 2.2rem;
+    
+  }
+}
+
+
 
  
- @media (max-width:876px) {
+ 
+ @media (max-width:1000px) {
   .main{
    position: relative;
    width: 100vw;
@@ -341,14 +311,14 @@ background-color:rgb(161, 20, 103);
    overflow: hidden;
   }
   input[type='radio']{
-    margin-top: -5rem;
+    margin-top: -2rem;
   }
   .container{
     position: relative;
-    margin-top: -1rem;
+    margin-top: -5%;
   }
  .navigator{
-   margin-top:-10rem;
+   margin-top:-5%;
  }
  .text{
   margin-top: 1rem;
@@ -362,6 +332,43 @@ background-color:rgb(161, 20, 103);
    line-height: 2.2rem;
    
  }
+}
+@media  (max-width:768px) and (max-height:1024px){
+  .main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+   }
+   input[type='radio']{
+     margin-top: -2rem;
+   }
+
+   .container{
+     position: relative;
+  
+     margin-top: -20%;
+   }
+  
+  .navigator{
+    position: relative;
+    margin-top: -20%;
+    align-self: center;
+  }
+  .text{
+    margin-top: 0rem;
+    height: 6rem;
+    font-size: 2rem;
+   
+   
+  }
+  p{
+    vertical-align: middle;
+    line-height: 2.2rem;
+    
+  }
 }
 @media (max-width:480px) {
   .main{
