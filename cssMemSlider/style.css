@@ -324,7 +324,7 @@ background-color: rgb(67, 170, 211);
   
   .navigator{
     position: relative;
-    margin-top: -20%;
+    margin-top: -30%;
     align-self: center;
   }
   .text{
@@ -429,7 +429,7 @@ background-color: rgb(67, 170, 211);
     margin-top: -20%;
   }
  .navigator{
-   margin-top:-10%;
+   margin-top:-25%;
  }
  .text{
   margin-top: 0rem;
@@ -467,7 +467,7 @@ background-color: rgb(67, 170, 211);
   
   .navigator{
     position: relative;
-    margin-top: -10%;
+    margin-top: -25%;
     align-self: center;
   }
   .text{
