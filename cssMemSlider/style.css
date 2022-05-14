@@ -42,7 +42,7 @@
    width: 26%;
    height: 100%;
    margin: 1rem 1%;
-   transition: transform 0.5s ease-in-out;
+   transition: transform 1s ease-in-out;
    
    
  }
@@ -85,7 +85,7 @@
    grid-row-end: 4;
    grid-column-start: 1;
    grid-column-end: 4;
-   color:rgb(44, 42, 42);
+   /*color:rgb(44, 42, 42);*/
    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
    font-size: 2em;
    display: flex;
@@ -97,6 +97,7 @@
    z-index: 20;
    overflow: hidden;
    margin-left: 4%;
+   
   
      
  }
@@ -108,11 +109,13 @@
    line-height: 2rem;
    width: 26%;
    overflow: hidden;
-   transition: transform 0.5s ease-in-out;
+   transition: transform 1s ease-in-out;
    
    
  }
+
  
+
  .navigator {
    position: relative;
    grid-row-start: 3;
@@ -144,8 +147,8 @@
  
 .navigator .circle{
   position: relative;
-  left: -1rem;
-  top: -0.5rem;
+  margin-left: -1rem;
+  margin-top: -0.5rem;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
@@ -163,7 +166,7 @@
 
  label:hover {
    
-   background-color: rgb(35, 184, 16);
+   background-color: rgb(117, 167, 170);
    box-shadow: 0 0 2px 2px #eff0db,
    0px 0px 3px 5px #a39e8b,
    0px 0px 4px 5px rgb(180, 180, 155);
@@ -189,31 +192,112 @@
    opacity: 0;
  }
  
+
+#slider2:checked ~ .text .item1 {
+  color: transparent;
+  
+}
+
+#slider3:checked ~ .text .item1 {
+  
+  color: transparent;
+  
+}
+#slider4:checked ~ .text .item1 {
  
+  color: transparent;
+  
+}
+
+#slider2:checked ~ .text .item3{
+  transition: color 0.5s;
+  color: transparent;
+  
+}
+#slider3:checked ~ .text .item4 {
+  transition: color 0.5s;
+  color: transparent;
+  
+}
+#slider4:checked ~ .text .item3 {
+  transition: color 0.5s;
+  color: transparent;
+  
+}
+#slider3:checked ~ .text .item2{
+  transition: color 0.5s;
+  color: transparent;
+  
+}
+#slider1:checked ~ .text .item2{
+  transition: color 0.5s;
+  color: transparent;
+  
+}
+#slider1:checked ~ .text .item3{
+  transition: color 0.5s;
+  color: transparent;
+  
+}
+#slider1:checked ~ .text .item4{
+  transition: color 0.5s;
+  color: transparent;
+  
+}
+#slider1:checked ~ .text .item1{
+ transition:color;
+ transition-delay: 2.5s;
+}
+
+#slider1:checked ~ .text .item1{
  
- #slider2:checked ~ .text .slide__text {
+  animation-name:coloring;
+  animation-delay: 0.5s;
+  animation-duration: 3s;
+  
+}
+ #slider2:checked ~ .text .item2 {
    transform: translate(-100%);
+   animation-name:coloring;
+   animation-delay: 0.2s;
+   animation-duration: 3s;
+   
+   
  }
 
  
- #slider3:checked ~ .text .slide__text {
-   
+ #slider3:checked ~ .text .item3 {
    transform: translate(-200%);
+   animation-name:coloring;
+   animation-delay: 0.2s;
+   animation-duration: 3s;
    
  }
 
- #slider4:checked ~ .text .slide__text {
+
+ #slider4:checked ~ .text .item4 {
    
    transform: translate(-300%);
+   animation-name:coloring;
+   animation-delay: 0.2s;
+   animation-duration: 3s;
+   
  }
- 
+ @keyframes coloring{
+  from{
+    color:transparent;
+  }
+  to{
+  color:rgb(44, 42, 42);
+  }
+}
  
  
  #slider1:checked ~ .navigator label:nth-child(1),
  #slider2:checked ~ .navigator label:nth-child(2),
  #slider3:checked ~ .navigator label:nth-child(3),
  #slider4:checked ~ .navigator label:nth-child(4){
-background-color: green;
+background-color: rgb(67, 170, 211);
  }
  
  
@@ -345,7 +429,7 @@ background-color: green;
     margin-top: -20%;
   }
  .navigator{
-   margin-top:-20%;
+   margin-top:-10%;
  }
  .text{
   margin-top: 0rem;
@@ -360,6 +444,7 @@ background-color: green;
    
  }
 }
+
 
 @media  (max-width:768px) and (max-height:1024px){
   .main{
@@ -382,7 +467,7 @@ background-color: green;
   
   .navigator{
     position: relative;
-    margin-top: -20%;
+    margin-top: -10%;
     align-self: center;
   }
   .text{
